@@ -1,0 +1,128 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(145deg, #e3f2fd, #fff3e0);
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h2, h3 {
+    color: #2e7d32;
+    font-weight: bold;
+  }
+  
+  .carousel-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 20px;
+  }
+  
+  .carousel-card {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 180px;
+    background: linear-gradient(to right, #fce4ec, #f3e5f5);
+    border-radius: 15px;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    scroll-snap-align: start;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .carousel-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .indicator.active {
+    background-color: #4caf50;
+  }
+  
+  .form-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    z-index: 9999;
+    max-width: 500px;
+    width: 90%;
+  }
+  
+  .form-popup h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .usp-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+  }
+  
+  .usp-card {
+    perspective: 1000px;
+    width: 300px;
+    height: 200px;
+  }
+  
+  .usp-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+  
+  .usp-card:hover .usp-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .usp-front, .usp-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+  }
+  
+  .usp-front {
+    background: #f1f8e9;
+  }
+  
+  .usp-back {
+    background: #ffe0b2;
+    transform: rotateY(180deg);
+  }
+  
+  .usp-back a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #d84315;
+    font-weight: bold;
+  }
+  
+  .usp-back a:hover {
+    text-decoration: underline;
+  }
+  
